@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login / Sign Up | Bloom &amp; Blossom</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Bloom <span>&amp; Blossom</span></a>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-icons">
+      <button class="icon-btn search-toggle" aria-label="Toggle search">&#128269;</button>
+      <form class="nav-search" role="search">
+        <input type="search" placeholder="Search flowers..." aria-label="Search flowers">
+      </form>
+      <a href="cart.html" class="icon-btn" aria-label="View cart">&#128722;<span class="cart-count">0</span></a>
+      <a href="login.html" class="auth-link">Login</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding-top:48px; padding-bottom:80px;">
+  <div class="auth-box">
+    <div class="auth-tabs">
+      <button type="button" id="tab-login" class="active">Login</button>
+      <button type="button" id="tab-signup">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="login-form" class="auth-form active" novalidate>
+      <div class="form-group">
+        <label for="login-email">Email Address</label>
+        <input type="email" id="login-email" required>
+        <span class="field-error" id="login-email-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <div class="password-field">
+          <input type="password" id="login-password" required>
+          <button type="button" class="toggle-password" data-target="login-password" aria-label="Show password">Show</button>
+        </div>
+        <span class="field-error" id="login-password-error"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+      <p id="login-msg" class="form-msg"></p>
+      <p style="text-align:center; color:var(--color-text-light); font-size:0.9rem;">
+        Demo only — sign up first to create a local test account.
+      </p>
+    </form>
+
+    <!-- SIGN UP FORM -->
+    <form id="signup-form" class="auth-form" novalidate>
+      <div class="form-group">
+        <label for="signup-name">Full Name</label>
+        <input type="text" id="signup-name" required>
+        <span class="field-error" id="signup-name-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="signup-email">Email Address</label>
+        <input type="email" id="signup-email" required>
+        <span class="field-error" id="signup-email-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Password</label>
+        <div class="password-field">
+          <input type="password" id="signup-password" required>
+          <button type="button" class="toggle-password" data-target="signup-password" aria-label="Show password">Show</button>
+        </div>
+        <span class="field-error" id="signup-password-error"></span>
+        <small style="color:var(--color-text-light);">At least 6 characters, including a letter and a number.</small>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      <p id="signup-msg" class="form-msg"></p>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">Bloom &amp; Blossom</div>
+      <p>Fresh flowers, thoughtfully arranged and delivered with love — for every moment that matters.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">&#128247;</a>
+        <a href="#" aria-label="Twitter">&#120143;</a>
+        <a href="#" aria-label="Pinterest">P</a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="shop.html?category=Roses">Roses</a></li>
+        <li><a href="shop.html?category=Bouquets">Bouquets</a></li>
+        <li><a href="shop.html?category=Wedding%20Flowers">Wedding Flowers</a></li>
+        <li><a href="shop.html?category=Birthday%20Flowers">Birthday Flowers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="login.html">Login / Sign Up</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 Bloom &amp; Blossom. All rights reserved. Crafted with &#127800; for happy moments.</p>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

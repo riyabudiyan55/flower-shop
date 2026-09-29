@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Bloom &amp; Blossom</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Bloom <span>&amp; Blossom</span></a>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-icons">
+      <button class="icon-btn search-toggle" aria-label="Toggle search">&#128269;</button>
+      <form class="nav-search" role="search">
+        <input type="search" placeholder="Search flowers..." aria-label="Search flowers">
+      </form>
+      <a href="cart.html" class="icon-btn" aria-label="View cart">&#128722;<span class="cart-count">0</span></a>
+      <a href="login.html" class="auth-link">Login</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <h1>Our Flower Shop</h1>
+  <p>Browse fresh roses, bouquets, lilies, tulips and more — arranged with care.</p>
+</div>
+
+<main class="container">
+
+  <div class="shop-toolbar">
+    <div class="toolbar-group">
+      <label for="shop-search" class="sr-only" style="position:absolute; left:-9999px;">Search products</label>
+      <input type="search" id="shop-search" placeholder="Search flowers by name or category...">
+
+      <label for="filter-category" class="sr-only" style="position:absolute; left:-9999px;">Filter by category</label>
+      <select id="filter-category">
+        <option value="all">All Categories</option>
+        <option value="Roses">Roses</option>
+        <option value="Bouquets">Bouquets</option>
+        <option value="Lilies">Lilies</option>
+        <option value="Tulips">Tulips</option>
+        <option value="Birthday Flowers">Birthday Flowers</option>
+        <option value="Wedding Flowers">Wedding Flowers</option>
+      </select>
+
+      <label for="filter-price" class="sr-only" style="position:absolute; left:-9999px;">Filter by price</label>
+      <select id="filter-price">
+        <option value="all">Any Price</option>
+        <option value="0-800">Under &#8377;800</option>
+        <option value="800-1200">&#8377;800 &ndash; &#8377;1200</option>
+        <option value="1200-1600">&#8377;1200 &ndash; &#8377;1600</option>
+        <option value="1600-0">Above &#8377;1600</option>
+      </select>
+    </div>
+
+    <div class="toolbar-group">
+      <label for="sort-select" class="sr-only" style="position:absolute; left:-9999px;">Sort products</label>
+      <select id="sort-select">
+        <option value="default">Sort: Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A to Z</option>
+        <option value="rating-desc">Rating: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <p id="results-count">16 products found</p>
+  <div class="product-grid" id="shop-grid"></div>
+  <div id="no-results">
+    <p style="font-size:2rem;">&#128546;</p>
+    <p>No flowers matched your search. Try a different keyword or filter.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">Bloom &amp; Blossom</div>
+      <p>Fresh flowers, thoughtfully arranged and delivered with love — for every moment that matters.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">&#128247;</a>
+        <a href="#" aria-label="Twitter">&#120143;</a>
+        <a href="#" aria-label="Pinterest">P</a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="shop.html?category=Roses">Roses</a></li>
+        <li><a href="shop.html?category=Bouquets">Bouquets</a></li>
+        <li><a href="shop.html?category=Wedding%20Flowers">Wedding Flowers</a></li>
+        <li><a href="shop.html?category=Birthday%20Flowers">Birthday Flowers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="login.html">Login / Sign Up</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 Bloom &amp; Blossom. All rights reserved. Crafted with &#127800; for happy moments.</p>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

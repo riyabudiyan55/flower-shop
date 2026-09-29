@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart | Bloom &amp; Blossom</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cart">
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Bloom <span>&amp; Blossom</span></a>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-icons">
+      <button class="icon-btn search-toggle" aria-label="Toggle search">&#128269;</button>
+      <form class="nav-search" role="search">
+        <input type="search" placeholder="Search flowers..." aria-label="Search flowers">
+      </form>
+      <a href="cart.html" class="icon-btn" aria-label="View cart">&#128722;<span class="cart-count">0</span></a>
+      <a href="login.html" class="auth-link">Login</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <h1>Your Shopping Cart</h1>
+  <p>Review your flowers before checking out.</p>
+</div>
+
+<main class="container">
+
+  <div id="empty-cart-msg" style="display:none;">
+    <div class="empty-icon">&#128717;</div>
+    <h2>Your cart is empty</h2>
+    <p style="color:var(--color-text-light); margin:12px 0 24px;">Looks like you haven't added any flowers yet.</p>
+    <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+  </div>
+
+  <div class="cart-layout">
+    <div style="overflow-x:auto;">
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+      <div style="margin-top:20px;">
+        <a href="shop.html" class="btn btn-outline">&larr; Continue Shopping</a>
+      </div>
+    </div>
+
+    <div id="cart-summary" class="cart-summary-box">
+      <h3>Order Summary</h3>
+      <div class="coupon-row">
+        <input type="text" id="coupon-input" placeholder="Coupon code (e.g. BLOOM10)">
+        <button class="btn btn-secondary" id="apply-coupon-btn" type="button">Apply</button>
+      </div>
+      <p id="coupon-msg" class="form-msg"></p>
+      <div class="summary-line"><span>Subtotal</span><span id="sum-subtotal">&#8377;0</span></div>
+      <div class="summary-line"><span>Discount</span><span id="sum-discount">-&#8377;0</span></div>
+      <div class="summary-line"><span>Delivery</span><span id="sum-delivery">&#8377;0</span></div>
+      <div class="summary-line total"><span>Total</span><span id="sum-total">&#8377;0</span></div>
+      <a href="checkout.html" class="btn btn-primary btn-block" style="margin-top:16px;">Proceed to Checkout</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">Bloom &amp; Blossom</div>
+      <p>Fresh flowers, thoughtfully arranged and delivered with love — for every moment that matters.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">&#128247;</a>
+        <a href="#" aria-label="Twitter">&#120143;</a>
+        <a href="#" aria-label="Pinterest">P</a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="shop.html?category=Roses">Roses</a></li>
+        <li><a href="shop.html?category=Bouquets">Bouquets</a></li>
+        <li><a href="shop.html?category=Wedding%20Flowers">Wedding Flowers</a></li>
+        <li><a href="shop.html?category=Birthday%20Flowers">Birthday Flowers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="login.html">Login / Sign Up</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 Bloom &amp; Blossom. All rights reserved. Crafted with &#127800; for happy moments.</p>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
